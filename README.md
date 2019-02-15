@@ -16,7 +16,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-<img src="https://i.imgur.com/O2ZfC6d.gifv" width=250><br>
+![](flix-iphoneXR-2.gif)
 
 ### Notes
 The most challenging part in this assignment is adding a trailer in our flix app. It was a challenge on how we could utilize some codes that we have used in the first part of the assignment with only some variations, especially that we haven't fully explored network requests yet. 
