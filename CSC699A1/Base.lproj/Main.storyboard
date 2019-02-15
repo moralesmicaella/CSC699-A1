@@ -173,7 +173,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-sj-wzT">
                                                 <rect key="frame" x="0.0" y="-98" width="414" height="259"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-Ym-TbI">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-Ym-TbI">
                                                 <rect key="frame" x="18" y="92" width="132" height="183"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -197,7 +197,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjY-d1-S6g">
                                                 <rect key="frame" x="20" y="325" width="374" height="173"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="173" id="5rI-Bx-EXg"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="173" id="5rI-Bx-EXg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,7 +264,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ0-ia-9LJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Jhs-bd-DOy">
                     <connections>
-                        <action selector="handleTap:" destination="Sjc-wJ-kVm" id="JtG-dl-r8O"/>
+                        <action selector="didTap:" destination="Sjc-wJ-kVm" id="Dwv-ok-2yQ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -290,7 +290,7 @@
                                                     <constraint firstAttribute="height" constant="259" id="FYW-BK-Jle"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-Q1-sur">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-Q1-sur">
                                                 <rect key="frame" x="18" y="193" width="132" height="183"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -315,7 +315,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSi-5i-Soi">
                                                 <rect key="frame" x="20" y="415" width="374" height="173"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="173" id="LyU-UN-RYv"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="173" id="LyU-UN-RYv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -378,7 +378,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmk-Rw-9la" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cdC-rO-D9w"/>
+                <tapGestureRecognizer id="cdC-rO-D9w">
+                    <connections>
+                        <action selector="didTap:" destination="U1V-pe-EQ3" id="ZDu-aE-Z7A"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1692.753623188406" y="1607.8125"/>
         </scene>

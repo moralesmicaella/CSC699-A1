@@ -44,15 +44,11 @@ class MovieDetailsViewController: UIViewController {
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
         
         backdropView.af_setImage(withURL: backdropUrl!)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-        view.addGestureRecognizer(tap)
     }
     
-    @objc func handleTap(sender: UITapGestureRecognizer){
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "trailerSegue", sender: nil)
     }
-    
     
     // MARK: - Navigation
 
@@ -61,7 +57,7 @@ class MovieDetailsViewController: UIViewController {
         
         //Pass the movie trailer to the details view controller
         let trailerViewController = segue.destination as! MovieTrailerViewController
-        trailerViewController.movie = movie
+        trailerViewController.id = String(movie["id"] as! Int)
         
     }
     

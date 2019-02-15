@@ -43,16 +43,12 @@ class MovieGridDetailsViewController: UIViewController {
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
         
         backdropView.af_setImage(withURL: backdropUrl!)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-        view.addGestureRecognizer(tap)
     }
-    
-    @objc func handleTap(sender: UITapGestureRecognizer){
+
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "trailerGridSegue", sender: nil)
     }
-
-
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -60,7 +56,7 @@ class MovieGridDetailsViewController: UIViewController {
      
      //Pass the movie trailer to the details view controller
      let trailerViewController = segue.destination as! MovieGridTrailerViewController
-     trailerViewController.movie = movie
+     trailerViewController.id = String(movie["id"] as! Int)
      
      }
 
